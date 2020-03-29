@@ -1,0 +1,12 @@
+
+
+<a href="/endroit/add">Ajouter un Endroit</a>
+<h1>Liste d'Endroits</h1>
+<ul>
+    <% for (let i = 0 ;  i < users.length ; i++) { %>
+    <li><%= users[i].endroitnom%> <%= users[i].endroitdescription %> 
+        <a href="/endroit/update/<%= users[i].endroitID %>">Modifier</a> 
+        <a href="/endroit/delete/<%= users[i].endroitID  %>">Effacer</a>
+    </li> 
+    <% } %>
+</ul>

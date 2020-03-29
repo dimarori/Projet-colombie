@@ -1,0 +1,11 @@
+
+<h1>Ajouter un Endroit</h1>
+<form action="/endroit/new" method="POST">
+    Nom : 
+    <input type="text" name="endroitnom" value ="<%= endroitnom %>" ><br>
+    Description : 
+    <input type="text" name="endroitdescription" value= "<%= endroitdescription %>"><br>
+    <input type="hidden" name="endroitID" value="<%= endroitID %>" >
+    <input type="submit" name="save" value="Sauver"><br>
+    <input type="submit" value="Retour à la liste" formaction="/endroit"> 
+</form>
