@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+  
+</head>
+<body >
+  <%- include('partials/menu'); -%>
+  <div class= "list">
+  <h1>Liste des Regions</h1>
+  <p>Les <strong>régions</strong> naturelles de la Colombie sont des divisions territoriales faites à partir des caractéristiques hétérogènes en termes de relief, 
+    de climat, de végétation et de type de sol du pays. En raison de la grande diversité des climats et des reliefs, ces différences régionales sont définies 
+    par une série de facteurs très clairs tels que les caractéristiques du relief (montagneux ou plat), la distance à la mer, les précipitations moyennes et les conditions du sol.</p>
+  <p>Cinq régions naturelles peuvent être différenciées en Colombie :</p>
+</div>
+<div class="container">
+  <section class="row">
+
+    <div class="col-xs-4 col-sm-3 col-md-4"><img name="region" id="region" src="/public/images/amazonie.jpeg" alt="Amazonie" ></div>
+    <div class="col-xs-4 col-sm-3 col-md-4"><img name="region" id="region" src="/public/images/pacifique.jpeg" alt="Pacifique" ></div>
+    <div class="col-xs-4 col-sm-3 col-md-4"><img name="region" id="region" src="/public/images/insulaire.jpeg" alt="insulaire" ></div>
+  </section>
+</div>
+  <div class="container"></div>
+    <div class="row">
+      <% for (let i = 0 ;  i < users.length ; i++) { %>
+      <div class="col">
+        <div class="card">
+          <div class="card-inner">
+            <div class="header">
+                <h2>
+               <a id="test" name='test'> <%= users[i].categorieNom%></a>
+                </h2>
+            </div>
+            <div class="content">
+            </div>
+          </div>
+          
+          <div class="card-action-right" >
+            <a class="middle" name="aller" id="aller" href="/ville/<%= users[i].categorieID %>">
+                  Aller aux villes
+            </a> </br>
+           <!--<a class="middle" name="add" id="add" href="/categorie/add">Ajouter une Region</a> </br>
+            <a class="middle" name="edit" id="edit" href="/categorie/delete/<%= users[i].categorieID  %>"">
+              Effacer </a>--> 
+              <!--<a class="middle" name="edit" id="edit" href="/categorie/delete/<%= users[i].categorieID  %>">
+                Effacer </a></br> -->
+          </div>
+        </div>
+      </div>   
+      <% } %>
+  </div>
+</div>
+
+</body>
+
+<%- include('partials/footer'); -%>
+</html>
+<style>
+
+#list{
+  color: rgba(57,66,64);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+  #test{
+    color: rgba(57,66,64);
+    font-size: 20;
+  }
+ #aller {
+      color:rgb(225,215,114);
+    }
+
+#region{
+  width: 200px;
+  min-height: 100px;
+  border-radius: 5px;
+  
+    
+}
+
+  </style>

@@ -1,12 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+</head>
 
+<body >
+  <%- include('partials/menu'); -%>
+<h1 class="liste">Liste d'Endroits</h1>
+  <div class="container">
+    <div class="row">
+      <% for (let i = 0 ;  i < users.length ; i++) { %>
+      <div class="col-sm-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="header">
+                <h2>
+               <a id="test" name='test'> <%= users[i].endroitnom%></a>
+                </h2>
+            </div>
+            <div class="content">
+            </div>
+          </div>
+          
+          <div class="card-action-right" >
+            <a class="middle" name="edit" id="edit" href="/endroit/update/<%= users[i].endroitID %>">
+              Modifier 
+            </a></br>
+            <a class="middle" name="add" id="add" href="/endroit/add">Ajouter un Endroit</a> </br>
+            <a class="middle" name="edit" id="edit" href="/endroit/delete/<%= users[i].endroitID  %>">
+              Effacer </a></br>
+          </div>
+        </div>
+      </div>   
+      <% } %>
+  </div>
+</div>
 
-<a href="/endroit/add">Ajouter un Endroit</a>
-<h1>Liste d'Endroits</h1>
-<ul>
-    <% for (let i = 0 ;  i < users.length ; i++) { %>
-    <li><%= users[i].endroitnom%> <%= users[i].endroitdescription %> 
-        <a href="/endroit/update/<%= users[i].endroitID %>">Modifier</a> 
-        <a href="/endroit/delete/<%= users[i].endroitID  %>">Effacer</a>
-    </li> 
-    <% } %>
-</ul>
+</body>
+
+<%- include('partials/footer'); -%>
+</html>
+<style>
+ 
+    #test{
+      color:rgb(57,66,64);
+    }
+    #edit {
+      color:rgb(225,215,114);
+    }
+    #add{
+      color:rgb(225,215,114);
+    }
+   
+  
+ 
+    </style>

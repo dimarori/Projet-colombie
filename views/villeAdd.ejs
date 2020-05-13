@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+  <title>Create Ville</title>
+  
+</head>
+<body >
+  <%- include('partials/menu'); -%>
+
+  <div> 
+      <h1 id="titre1">Ajouter une Ville</h1>
+      <form action="/ville/new/" method="POST" >
+        <div>
+            <label> Nom Ville:</label>
+            <input type="text" class="form-control col-md-10"  name="villeNom" value ="<%= villeNom %>" ><br>
+        </div>
+            <br/>
+        <div>
+            <input type="hidden" class="form-control col-md-10"  name="categorieID" value ="<%= categorieID %>" ><br>
+        </div>
+              <br />
+            <div class="form-group">
+                <input type="hidden" name="villeID" value="<%= villeID %>" >
+                <input type="submit" name="save" value="Sauver"><br>
+            </div>
+          </form>
+        </div>
+  
+
+</body>
+<%- include('partials/footer'); -%>
+</html>
+
+<style>
+  #titre1 {
+      font-weight: bold;
+      margin-top: 1%;
+      font-size: 40 px;
+      
+  }
+  
+  input{
+      width : 50%;
+
+  }
+  
+  </style>
+
+

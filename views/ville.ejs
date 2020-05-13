@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+  <title>Ville</title>
+  
+</head>
+<body >
+  <%- include('partials/menu'); -%>
+  <h1 class="liste">Liste des Villes</h1>
+    <div class="container"> 
+      <div class="row">
+        <% for (let i = 0 ;  i < users.length; i++) { %>
+          <div class="col-sm-3">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>
+                       <a id="test" name='test'> <%= users[i].villeNom%></a>
+                        </h2>
+                    </div>
+                    <div class="content">
+                    </div>
+                  </div>
+              <div class="card-action">
+                <a class="middle" name="aller" id="aller" href="/endroit/<%= users[i].villeID %>">
+                    Aller aux Endroits
+              </a> </br>  
+             <!-- <a class="middle" name="mod" id="mod" href="/ville/update/<%= users[i].villeID %>">
+                 modifier <img name="see" id="see" src="/public/images//modifier.png" />
+              </a></br>
+              <a class="middle" name="add" id="add" href="/ville/add">Ajouter une Ville</a> </br>
+              <a class="middle" name="delete" id="delete" href="/ville/delete/<%= users[i].villeID  %>"">
+                Effacer </a> --> </br> </br></br>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+    
+      </div>
+
+</body>
+
+<%- include('partials/footer'); -%>
+</html>
+
+<style>
+#aller {
+      color:rgb(225,215,114);
+    }
+
+#test{
+  color: black;
+}
+</style>
+

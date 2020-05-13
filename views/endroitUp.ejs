@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+  
+</head>
+<body >
+  <%- include('partials/menu'); -%>
+    <div>
+        <h1 id="titre1">Modifier un Endroit</h1> </br>
+        <form action="/endroit/Update" method="POST"  >
+          <div>
+                <label>Nom Endroit:</label>
+                <input type="text" class="form-control col-md-10"  name="endroitnom" value="<%= endroitnom %>">
+                
+              </div>
+
+                <br />
+            <div class="form-group">
+              <button class="btn btn-primary">Modifier</button>
+            </div>
+            
+    </form>
+    </div>
+
+  
+</body>
+
+<%- include('partials/footer'); -%>
+</html>
+<style>
+  #titre1 {
+      font-weight: bold;
+      margin-top: 1%;
+      font-size: 40 px;
+      
+  }
+  
+  input{
+      width : 50%;
+
+  }
+  
+  
+  </style>
+

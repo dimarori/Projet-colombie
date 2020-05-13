@@ -1,11 +1,14 @@
 class Endroit {
     endroitnom ="";
-    endroitdescription = "";
-    constructor(endroitnom, endroitdescription)
+    villeID="";
+   
+    
+    constructor(endroitnom, villeID)
     {
         this.endroitnom = endroitnom;
-        this.endroitdescription = endroitdescription;
+        this.villeID= villeID;
     }
+   
 };
-
 module.exports = Endroit;
+

@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); -%>
+  
+</head>
+<body >
+  <%- include('partials/menu'); -%>
+  <% if(update) { %>
+    <div>
+        <h1 id="titre1">Modifier Region</h1> </br>
+        <form action="/categorie/Update" method="POST" id="cat" name="cat" >
+          <div>
+                <label>Nom de la Region:</label>
+                <input type="text" class="form-control col-md-10"  name="categorieNom" value="<%= categorieNom %>">
+            </div>
+
+                <br />
+            <div class="form-group">
+              <button class="btn btn-primary">Modifier</button>
+            </div>
+            <h3 style="color: red;"> <%= message %></h3>
+        </form>
+      </div>
+
+    <% } %>
+    <% if(!update) { %>
+<div>
+    <h1 id="titre1">Ajouter une Region</h1> </br>
+    <form action="/categorie/new"  method="POST" id="cat" name="cat" >
+      <div>
+            <label>Nom de la Region:</label>
+            <input type="text" class="form-control col-md-10"  name="categorieNom" value ="<%= categorieNom %>">
+        </div>
+          
+        <div class="form-group">
+          <input type="hidden" name="categorieID" value="<%= categorieID %>" >
+          <input type="submit" name="save" value="Sauver"><br>
+        </div>
+        <h3 style="color: red;"> <%= message %></h3>
+    </form>
+
+  </div>
+  <% } %>    
+
+
+</body>
+
+<%- include('partials/footer'); -%>
+</html>
+<style>
+  #titre1 {
+      font-weight: bold;
+      margin-top: 1%;
+      font-size: 40 px;
+      
+  }
+  
+  input{
+      width : 50%;
+
+  }
+  
+  
+  
+  </style>
+
+
+
+

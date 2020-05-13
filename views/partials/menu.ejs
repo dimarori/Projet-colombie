@@ -1,0 +1,193 @@
+<nav class="navbar navbar-inverse" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Architecture Web/Colombie</a>
+        <img src="/public/images//drapeau.jpeg" alt="logo" style="width:60px;"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a href="#">HOME</a></li>
+          <li ><a href="/categorie/">Region</a></li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <form class="form-inline md-form mr-auto mb-4" action="/endroit/filter/" method="POST" id="coll" name="coll">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="name">
+      <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+    </form>
+  
+    <style>
+
+:root {
+    --base-color-h:400;
+    --base-color-s:80%;
+    --base-color-l:65%;
+    --base-color:hsl(var(--base-color-h),
+                     var(--base-color-s),
+                        var(--base-color-l));
+
+    --base-color-darken-20: hasl (var(--base-color-h),
+                                 var(--base-color-s),
+                                 calc(var(--base-color-l)-20%));
+    --length-M: 1rem;
+    --length-L: calc(var(--length-M) * 2);
+    --length-S: calc(var(--length-M) / 2);
+  }
+  .container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.container > header h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 35px;
+	line-height: 35px;
+	position: relative;
+	color:#FFF;
+    padding: 0px 0px 5px 0px;
+	font-weight:600;
+}
+
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+#collection-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+  }
+
+.active>a {
+  color: #1abc9c !important;
+}
+.card:hover {
+    opacity: .7;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+  }
+
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+body{
+        background: var(--base-color) repeat top left;
+  }
+
+.card {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.2s ease-in-out; /*changer de couleur*/
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(69,170,184);
+    }
+  
+    .card>.card-inner {
+        padding: 10px;
+    }
+    .card:hover {
+        opacity: .7;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+    }
+
+    .card .header h2,
+    h3 p {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .card .header {
+        margin-bottom: 5px;
+    }
+
+  .card .card-content {
+    padding: 16px;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+  }
+
+  .card .card-content p {
+    margin: 0;
+    color: inherit;
+  }
+
+  .card .card-content span.card-title {
+    line-height: 48px;
+  }
+  .card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .card .card-action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 16px;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .card .card-action a {
+    color: black;
+    margin-right: 16px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+
+  }
+
+  .card .card-action a:hover {
+    color: #ffd8a6;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+  }
+  
+    #collection-button:hover {
+    zoom: 1.2;
+  }
+
+    #mid:hover{
+        opacity: 2;
+    }
+ 
+
+    #titre {
+        font-weight: bold;
+        margin-top: 1%;
+    }
+
+    #coll {
+        text-align: right;
+        font-family: serif
+    }
+
+
+    </style>
+
+    
